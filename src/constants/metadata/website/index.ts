@@ -17,18 +17,18 @@ export const METADATA: Metadata = {
     "university showcase",
   ],
   authors: [
-    { name: "CS Seniors 2026 Team", url: "https://seniors2026.vercel.app" },
+    { name: "CS Seniors 2026 Team", url: "https://our-graduation-project-team.vercel.app/" },
   ],
-  metadataBase: new URL("https://seniors2026.vercel.app"),
+  metadataBase: new URL("https://our-graduation-project-team.vercel.app/"),
   openGraph: {
     title: "Seniors 2026 — Computer Science Graduation Project",
     description:
       "Showcasing the creativity and innovation of Computer Science Seniors 2026. Explore projects in AI, web development, cybersecurity, and more.",
-    url: process.env.NEXT_PUBLIC_URL || "http://localhost:3000",
+    url: process.env.NEXT_PUBLIC_URL || "https://our-graduation-project-team.vercel.app/",
     siteName: "Seniors 2026",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Seniors 2026 Computer Science Project Showcase",
@@ -42,7 +42,7 @@ export const METADATA: Metadata = {
     title: "Seniors 2026 — Computer Science Graduation Project",
     description:
       "Discover innovative Computer Science graduation projects by Seniors 2026.",
-    images: ["/og-image.jpg"],
-    creator: "@Seniors2026",
+    images: ["/og-image.png"],
+    creator: "@Seniors2026-CS",
   },
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 
@@ -7,9 +8,10 @@ interface CrowdCanvasProps {
   src: string;
   rows?: number;
   cols?: number;
+  className?: string
 }
 
-const CrowdCanvas = ({ src, rows = 15, cols = 7 }: CrowdCanvasProps) => {
+const CrowdCanvas = ({ src, rows = 15, cols = 7, className }: CrowdCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -278,7 +280,7 @@ const CrowdCanvas = ({ src, rows = 15, cols = 7 }: CrowdCanvasProps) => {
     };
   }, []);
   return (
-    <canvas ref={canvasRef} className="absolute bottom-0 h-[90vh] w-full" />
+    <canvas ref={canvasRef} className={cn("absolute bottom-0 h-[90vh] w-full", className)} />
   );
 };
 
