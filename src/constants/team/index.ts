@@ -11,23 +11,10 @@ export const MEMBERS = [
         avatar: '/images/team/png/abdelrahman-ali-2.jpeg',
         link: '#',
     },
-    // {
-    //     name: 'Isabella Garcia',
-    //     role: 'Sales Manager',
-    //     avatar: 'https://alt.tailus.io/images/team/member-three.webp',
-    //     link: '#',
-    // },
-    // {
-    //     name: 'Henry Lee',
-    //     role: 'UX Engeneer',
-    //     avatar: 'https://alt.tailus.io/images/team/member-four.webp',
-    //     link: '#',
-    // },
-
     {
-        name: 'salah shalapy',
-        role: 'Front-End',
-        avatar: '/images/team/png/shalapy.jpeg',
+        name: 'abdelrahman ahmed',
+        role: 'Blockchain Developer - DevOps - Back-End',
+        avatar: '/images/team/png/abdelrahman-ahmed.jpeg',
         link: '#',
     },
     {
@@ -40,6 +27,24 @@ export const MEMBERS = [
         name: 'fady emad',
         role: 'Front-End',
         avatar: '/images/team/png/fady-1.jpeg',
+        link: '#',
+    },
+    {
+        name: 'karim ali',
+        role: 'Front-End',
+        avatar: '/images/team/png/karim-ali.jpeg',
+        link: '#',
+    },
+    {
+        name: 'karim moustafa',
+        role: 'Back-End',
+        avatar: '/images/team/png/karim-m.png',
+        link: '#',
+    },
+    {
+        name: 'salah shalapy',
+        role: 'Front-End',
+        avatar: '/images/team/png/shalapy.jpeg',
         link: '#',
     },
 ]
