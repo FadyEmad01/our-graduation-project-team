@@ -42,6 +42,12 @@ export const MEMBERS = [
         link: '#',
     },
     {
+        name: 'Mazin Ahmed',
+        role: 'Front-End',
+        avatar: '/images/team/png/mazin.png',
+        link: '#',
+    },
+    {
         name: 'salah shalapy',
         role: 'Front-End',
         avatar: '/images/team/png/shalapy.jpeg',
