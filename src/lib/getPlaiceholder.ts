@@ -32,6 +32,9 @@ export async function addBlurToMembers(members: typeof MEMBERS) {
     members.map(async (member) => ({
       ...member,
       blurDataURL: await getBlurDataURL(member.avatar),
+      coverImageBlur: member.coverImage
+        ? await getBlurDataURL(member.coverImage)
+        : undefined,
     }))
   );
   return membersWithBlur;

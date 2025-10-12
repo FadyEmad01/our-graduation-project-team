@@ -3,4 +3,6 @@ export type Member = {
     role: string;
     avatar: string;
     blurDataURL?: string;
+    coverImage?: string;
+    coverImageBlur?: string;
 };
