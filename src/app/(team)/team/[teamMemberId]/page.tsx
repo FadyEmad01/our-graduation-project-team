@@ -10,8 +10,9 @@ import Container from "@/components/Container";
 import { addBlurToMembers } from "@/lib/getPlaiceholder";
 
 interface TeamPageProps {
-  params: { teamMemberId: string };
+  params: Promise<{ teamMemberId: string }>;
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* 🧠 Generate Static Params (pre-render all member pages)                    */
@@ -26,7 +27,8 @@ export async function generateStaticParams() {
 /* 🧠 Generate Dynamic Metadata (SEO per member)                              */
 /* -------------------------------------------------------------------------- */
 export async function generateMetadata({ params }: TeamPageProps): Promise<Metadata> {
-  const memberId = decodeURIComponent(params.teamMemberId);
+  const { teamMemberId } = await params;
+  const memberId = decodeURIComponent(teamMemberId);
 
   const member = MEMBERS.find(
     (m) => m.name.toLowerCase().replace(/\s+/g, "-") === memberId.toLowerCase()
@@ -74,7 +76,8 @@ export async function generateMetadata({ params }: TeamPageProps): Promise<Metad
 /* -------------------------------------------------------------------------- */
 export default async function TeamMemberPage({ params }: TeamPageProps) {
   const membersWithBlur = await addBlurToMembers(MEMBERS);
-  const memberId = decodeURIComponent(params.teamMemberId);
+  const { teamMemberId } = await params;
+  const memberId = decodeURIComponent(teamMemberId);
 
   const member = membersWithBlur.find(
     (m) => m.name.toLowerCase().replace(/\s+/g, "-") === memberId.toLowerCase()
