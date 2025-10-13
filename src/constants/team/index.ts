@@ -42,7 +42,7 @@ export const MEMBERS = [
         coverImage: ""
     },
     {
-        name: 'Karim Moustafa',
+        name: 'Karim Mostafa',
         role: 'Back-End',
         avatar: '/images/team/png/karim-m.png',
         link: '#',
