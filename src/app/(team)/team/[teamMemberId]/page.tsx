@@ -120,14 +120,16 @@ export default async function TeamMemberPage({ params }: TeamPageProps) {
                   priority
                 />
               )}
-              <div className="h-full w-full object-cover rounded-2xl bg-primary"
-                style={{
-                  filter: "brightness(60%) grayscale(30%)",
-                  maskImage:
-                    "linear-gradient(to top, transparent 0%, var(--foreground) 100%)",
-                  WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, var(--foreground) 100%)",
-                }} />
+              {!member.coverImage && (
+                <div className="h-full w-full object-cover rounded-2xl bg-primary"
+                  style={{
+                    filter: "brightness(60%) grayscale(30%)",
+                    maskImage:
+                      "linear-gradient(to top, transparent 0%, var(--foreground) 100%)",
+                    WebkitMaskImage:
+                      "linear-gradient(to top, transparent 0%, var(--foreground) 100%)",
+                  }} />
+              )}
             </div>
           </div>
           <div className="-mt-12 sm:px-6">
