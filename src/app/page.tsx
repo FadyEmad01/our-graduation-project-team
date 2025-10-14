@@ -8,9 +8,15 @@ export default function Home() {
   return (
     <div className="relative h-svh w-screen flex justify-center items-center">
       <div className="top-22 absolute left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center z-50">
-        <Button asChild variant="outline" size="sm">
-          <Link href="/team">View our team</Link>
-        </Button>
+        <div className="flex items-center gap-4">
+          <Button asChild variant="default" size="sm">
+            <Link href="/changelog">View our Changelog</Link>
+          </Button>
+          <Button asChild variant="outline" size="sm">
+            <Link href="/team">View our Team</Link>
+          </Button>
+        </div>
+
       </div>
       <h1
         className="pointer-events-none block relative lg:-top-15 md:-top-20 -top-30 -z-10 w-full text-center text-[clamp(1rem,23vw,20rem)] leading-tight font-bold font-sans text-nowrap overflow-hidden"
