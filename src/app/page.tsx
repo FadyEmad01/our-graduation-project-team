@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="relative h-svh w-screen flex justify-center items-center">
       <div className="top-22 absolute left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center z-50">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap justify-center">
           <Button asChild variant="default" size="sm">
             <Link href="/changelog">View our Changelog</Link>
           </Button>
