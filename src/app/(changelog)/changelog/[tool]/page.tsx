@@ -32,11 +32,12 @@ const pdfData: Record<string, { title: string; description: string; pdfUrl: stri
     },
 }
 
-export default function ToolDetails({ params }: { params: { tool: string } }) {
-    const tool = pdfData[params.tool]
+export default async function ToolDetails({ params }: { params: Promise<{ tool: string }> }) {
+    const { tool } = await params
+    const toolData = pdfData[tool]
 
     //   if (!tool) return notFound()
-    if (!tool) return (
+    if (!toolData) return (
         <Empty className="from-muted/50 to-background h-screen w-screen bg-gradient-to-b from-30%">
             <EmptyHeader>
                 <EmptyMedia variant="icon">
@@ -55,14 +56,14 @@ export default function ToolDetails({ params }: { params: { tool: string } }) {
 
     return (
         <section className="max-w-3xl mx-auto py-16 px-6">
-            <h1 className="text-3xl font-bold mb-4">{tool.title}</h1>
-            <p className="text-muted-foreground mb-6">{tool.description}</p>
+            <h1 className="text-3xl font-bold mb-4">{toolData.title}</h1>
+            <p className="text-muted-foreground mb-6">{toolData.description}</p>
 
             <div className="border rounded-2xl p-4 bg-muted/40">
                 <iframe
-                    src={tool.pdfUrl}
+                    src={toolData.pdfUrl}
                     className="w-full h-[80vh] rounded-lg border"
-                    title={tool.title}
+                    title={toolData.title}
                 />
             </div>
 
